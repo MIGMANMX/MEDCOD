@@ -48,13 +48,13 @@
               <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="{{asset('img/M.jpg')}}" class="user-image" alt="User Image">
               <span class="hidden-xs">Milton Ortega</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{asset('img/M.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
                   Milton Ortega - POOWND
@@ -191,7 +191,16 @@
         
         <!-- Main content -->
         <section class="content">
-          
+           <!--BAnner-->
+          <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                  <img src="{{asset('img/6MD.png')}}"  alt="Chania">
+                  <div class="carousel-caption">
+                  </div>
+              </div>
+         </div>
+
+         <!--BAnner-->
           <div class="row">
             <div class="col-md-12">
               <div class="box">
@@ -200,8 +209,8 @@
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
-                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                  </div>
+                   <!--   <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                 --> </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
