@@ -22,7 +22,7 @@ class MedicoController extends Controller
             $query=trim($request->get('searchText'));
             $medicos=DB::table('Medicos')->where('Nombre','LIKE','%'.$query.'%')
             ->where ('Estado','=','1')
-            ->orderBy('idMedicos','desc')
+            ->orderBy('idMedicos','asc')
             ->paginate(7);
             return view('medico.medicos.index',["medicos"=>$medicos,"searchText"=>$query]);
         }

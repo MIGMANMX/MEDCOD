@@ -27,7 +27,7 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="inicio.html" class="logo">
+        <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>MED</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -111,18 +111,24 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="inicio.html"><i class="fa fa-circle-o"></i> Registro</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Historial</a></li>
+                <li><a href="{{url('paciente/pacientes')}}"><i class="fa fa-circle-o"></i>Listado</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>Historia de Pacientes</a></li>
                 
               </ul>
             </li>
              <li class="treeview">
-             <a href="pages/calendar.html">
+             <a href="#">
                 <i class="fa fa-stethoscope"></i>
                 <span>Consulta</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
-              
+              <ul class="treeview-menu">
+                <li><a href="{{url('paciente/pacientes')}}"><i class="fa fa-circle-o"></i>Agendar Citas</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>Receta</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>Nota de Evolucion</a></li>
+
+                
+              </ul>
             </li>
              <li class="treeview">
               <a href="#">
@@ -139,14 +145,14 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="inicio.html"><i class="fa fa-circle-o"></i> Pacientes Diario</a></li>
-                <li><a href="B.html"><i class="fa fa-circle-o"></i> Listado Pacientes</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Pacientes Diario</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Listado Pacientes</a></li>
                 
               </ul>
             </li>
             
            <li class="treeview">
-              <a href="#">
+              <a href="{{url('consultorio/consultorios')}}">
                 <i class="fa fa-hospital-o"></i> <span>Consultorios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -159,8 +165,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-                
+                <li><a href="{{url('medico/medicos')}}"><i class="fa fa-circle-o"></i>Medicos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>Control de acceso</a></li>
               </ul>
             </li>
              <li>

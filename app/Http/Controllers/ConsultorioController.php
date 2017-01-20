@@ -22,7 +22,7 @@ class ConsultorioController extends Controller
             $query=trim($request->get('searchText'));
             $consultorios=DB::table('Consultorio')->where('Consultorio','LIKE','%'.$query.'%')
             ->where ('Estado','=','1')
-            ->orderBy('idConsultorio','desc')
+            ->orderBy('idConsultorio','asc')
             ->paginate(7);
             return view('consultorio.consultorios.index',["consultorios"=>$consultorios,"searchText"=>$query]);
         }

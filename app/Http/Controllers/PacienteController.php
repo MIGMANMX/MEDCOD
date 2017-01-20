@@ -28,7 +28,7 @@ class PacienteController extends Controller
             $Pacientes=DB::table('Pacientes')->where('Nombre','LIKE','%'.$query.'%')
             ->where ('Estado','=','1')
             //->where ('idMedicos','=','1')
-            ->orderBy('idPacientes','desc')
+            ->orderBy('idPacientes','asc')
             ->paginate(7);
             return view('paciente.pacientes.index',["Pacientes"=>$Pacientes,"searchText"=>$query]);
         }
