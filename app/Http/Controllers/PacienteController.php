@@ -49,7 +49,7 @@ class PacienteController extends Controller
         $paciente->Direccion=$request->get('Direccion');
         $paciente->Email=$request->get('Email');
         $paciente->Telefono=$request->get('Telefono');
-        $paciente->Fecha_Nac='2016-09-13 00:00:00';
+        $paciente->Fecha_Nac=$request->get('Fecha_Nac');
         $paciente->Estado='1';
         $paciente->idConsultorio=$request->get('idConsultorio');
         $paciente->idMedicos=$request->get('idMedicos');
@@ -76,7 +76,7 @@ class PacienteController extends Controller
         $paciente->Direccion=$request->get('Direccion');
         $paciente->Email=$request->get('Email');
         $paciente->Telefono=$request->get('Telefono');
-        $paciente->Fecha_Nac='2016-09-13 00:00:00';
+        $paciente->Fecha_Nac=$request->get('Fecha_Nac');
         $paciente->Estado='1';
         $paciente->idConsultorio=$request->get('idConsultorio');
         $paciente->idMedicos=$request->get('idMedicos');

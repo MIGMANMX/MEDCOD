@@ -21,6 +21,6 @@ Route::get('/', function () {
 Route::resource('paciente/pacientes','PacienteController');
 Route::resource('consultorio/consultorios','ConsultorioController');
 Route::resource('medico/medicos','MedicoController');
-
+Route::resource('paciente/evolucion','RecetaController');
 
 

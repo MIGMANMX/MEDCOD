@@ -659,9 +659,15 @@
 				var s = 1.70158;
 				var p = 0;
 				var a = 1;
-				if (t === 0) return 0;
-				if ((t /= 1) == 1) return 1;
-				if (!p) p = 1 * 0.3;
+				if (t === 0){
+					return 0;
+				}
+				if ((t /= 1) == 1){
+					return 1;
+				}
+				if (!p){
+					p = 1 * 0.3;
+				}
 				if (a < Math.abs(1)) {
 					a = 1;
 					s = p / 4;

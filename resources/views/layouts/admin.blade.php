@@ -135,7 +135,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{url('paciente/pacientes')}}"><i class="fa fa-circle-o"></i>Agendar Citas</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i>Receta</a></li>
+                <li><a href="{{url('paciente/evolucion')}}"><i class="fa fa-circle-o"></i>Receta</a></li>
                 <li><a href="#"><i class="fa fa-circle-o"></i>Nota de Evolucion</a></li>
 
                 
@@ -337,5 +337,7 @@
     });
   });
 </script>
+
+
   </body>
 </html>
