@@ -32,8 +32,8 @@
 					<td>{{$pac->Email}}</td>
 					<td>{{$pac->Telefono}}</td>
 					<td>{{$pac->Fecha_Nac}}</td>
-					<td>{{$pac->idConsultorio}}</td>
-					<td>{{$pac->idMedicos}}</td>
+					<td>{{$pac->Consultorio}}</td>
+					<td>{{$pac->Medico}}</td>
 					<td>
 						<a href="{{URL::action('PacienteController@edit',$pac->idPacientes)}}"><button class="btn btn-info">Editar</button></a>
 						 <a href="" data-target="#modal-delete-{{$pac->idPacientes}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

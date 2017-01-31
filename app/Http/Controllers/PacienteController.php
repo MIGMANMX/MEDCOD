@@ -25,10 +25,15 @@ class PacienteController extends Controller
         if ($request)
         {
             $query=trim($request->get('searchText'));
-            $Pacientes=DB::table('Pacientes')->where('Nombre','LIKE','%'.$query.'%')
-            ->where ('Estado','=','1')
+            $Pacientes=DB::table('Pacientes as p')
+            ->join('Medicos as m','p.idMedicos','=','m.idMedicos')
+            ->join('Consultorio as c','p.idConsultorio','=','c.idConsultorio')
+            ->select('p.idPacientes','p.Nombre','p.Apellido','p.Direccion','p.Email','p.Telefono','p.Fecha_Nac','m.Medico','c.Consultorio')
+            
+            ->where('p.Nombre','LIKE','%'.$query.'%')
+            ->where ('p.Estado','=','1')
             //->where ('idMedicos','=','1')
-            ->orderBy('idPacientes','asc')
+            ->orderBy('p.idPacientes','asc')
             ->paginate(7);
             return view('paciente.pacientes.index',["Pacientes"=>$Pacientes,"searchText"=>$query]);
         }

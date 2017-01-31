@@ -17,7 +17,7 @@
             {{Form::token()}}
             <div class="form-group">
             	<label for="Consultorio">Medico</label>
-            	<input type="text" name="Nombre" class="form-control" placeholder="Nombre Completo">
+            	<input type="text" name="Medico" class="form-control" placeholder="Nombre Completo">
             </div>
             <div class="form-group">
             	<label for="Descripcion">Especialidad</label>

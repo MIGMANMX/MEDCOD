@@ -23,7 +23,7 @@
                @foreach ($Evolucion as $evo)
 				<tr>
 					<td>{{ $evo->idEvolucion}}</td>
-					<td>{{ $evo->idPacientes}}</td>
+					<td>{{ $evo->Nombre}}   {{ $evo->Apellido}}</td>
 					<td>{{ $evo->Recomendaciones}}</td>
 					<td>{{ $evo->Observaciones}}</td>
 

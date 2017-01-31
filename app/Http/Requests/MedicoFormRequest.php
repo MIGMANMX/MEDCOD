@@ -19,7 +19,7 @@ class MedicoFormRequest extends Request
     public function rules()
     {
         return [
-            'Nombre'=>'required|max:45',
+            'Medico'=>'required|max:45',
             'Especialidad'=>'required|max:20',
         ];
     }

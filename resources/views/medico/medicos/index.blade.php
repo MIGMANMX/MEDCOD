@@ -13,14 +13,14 @@
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
 					<th>Id</th>
-					<th>Nombre</th>
+					<th>Medico</th>
 					<th>Especialidad</th>
 					<th>Opciones</th>
 				</thead>
                @foreach ($medicos as $med)
 				<tr>
 					<td>{{ $med->idMedicos}}</td>
-					<td>{{ $med->Nombre}}</td>
+					<td>{{ $med->Medico}}</td>
 					<td>{{ $med->Especialidad}}</td>
 					<td>
 						<a href="{{URL::action('MedicoController@edit',$med->idMedicos)}}"><button class="btn btn-info">Editar</button></a>

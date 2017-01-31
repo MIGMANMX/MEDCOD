@@ -22,11 +22,16 @@ class RecetaController extends Controller
         if ($request)
         {
             $query=trim($request->get('searchText'));
-            $Evolucion=DB::table('Evolucion')->where('idPacientes','LIKE','%'.$query.'%')
-            ->where ('Estado','=','1')
-            ->orderBy('idEvolucion','asc')
+            $Evolucion=DB::table('Evolucion as e')
+            
+            ->join('Pacientes as p','e.idPacientes','=','p.idPacientes')
+            ->select('e.idEvolucion','p.Nombre','p.Apellido','e.Recomendaciones','e.Observaciones','e.Medicacion','e.Fecha')
+            ->where('e.idPacientes','LIKE','%'.$query.'%')
+            ->where ('e.Estado','=','1')
+            ->orderBy('e.idEvolucion','asc')
             ->paginate(7);
             return view('paciente.evolucion.index',["Evolucion"=>$Evolucion,"searchText"=>$query]);
+                       
         }
     }
     public function create()

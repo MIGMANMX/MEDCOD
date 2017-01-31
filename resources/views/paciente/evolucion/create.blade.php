@@ -15,22 +15,24 @@
 
 			{!!Form::open(array('url'=>'paciente/evolucion','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
-            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
             <div class="form-group">
             	<label for="Recomendaciones">Recomendaciones</label>
-            	<input type="text" name="Recomendaciones" class="form-control" placeholder="Recomendaciones">
-            </div></div>
+            	<textarea rows="4" cols="60" type="text" name="Recomendaciones" class="form-control" placeholder="Recomendaciones"></textarea> 
+            </div>
+
+            </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
             <div class="form-group">
-            	<label for="Observaciones">Observaciones</label>
-            	<input type="text" name="Observaciones" class="form-control" placeholder="Observaciones">
+            	<label for="Observaciones">Observaciones</label>           	
+            	<textarea rows="4" cols="60" type="text" name="Observaciones" class="form-control" placeholder="Observaciones"></textarea> 
             </div>
             </div>
 
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
             <div class="form-group">
             	<label for="Medicacion">Medicacion</label>
-            	<input type="text" name="Medicacion" class="form-control" placeholder="Medicacion">
+            	<textarea rows="4" cols="60" type="text" name="Medicacion" class="form-control" placeholder="Medicacion"></textarea> 
             </div>
             </div>
            

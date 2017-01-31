@@ -20,7 +20,7 @@ class MedicoController extends Controller
         if ($request)
         {
             $query=trim($request->get('searchText'));
-            $medicos=DB::table('Medicos')->where('Nombre','LIKE','%'.$query.'%')
+            $medicos=DB::table('Medicos')->where('Medico','LIKE','%'.$query.'%')
             ->where ('Estado','=','1')
             ->orderBy('idMedicos','asc')
             ->paginate(7);
@@ -35,7 +35,7 @@ class MedicoController extends Controller
     public function store (MedicoFormRequest $request)
     {
         $medico=new Medico;
-        $medico->Nombre=$request->get('Nombre');
+        $medico->Medico=$request->get('Medico');
         $medico->Especialidad=$request->get('Especialidad');
         $medico->Estado='1';
         $medico->save();
@@ -53,7 +53,7 @@ class MedicoController extends Controller
     public function update(ConsultorioFormRequest $request,$id)
     {
         $medico=Medico::findOrFail($id);
-        $medico->Nombre=$request->get('Nombre');
+        $medico->Medico=$request->get('Medico');
         $medico->Especialidad=$request->get('Especialidad');
         $medico->update();
         return Redirect::to('medico/medicos');
